@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Taller_manillas</string>
+    <string name="manilla">Manilla</string>
+    <string name="tipo">Tipo</string>
+    <string name="material">Material</string>
+    <string name="dije">Dije</string>
+    <string name="pago">Pago</string>
+    <string name="total_pagar">Total Pago</string>
+    <string name="numero">Numero Manillas</string>
+    <string name="calcular">Calcular</string>
+    <string name="borrar">Borrar</string>
+</resources>

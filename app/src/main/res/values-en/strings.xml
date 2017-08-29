@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Taller_manillas</string>
+    <string name="borrar">delete</string>
+    <string name="calcular">Calculate</string>
+    <string name="dije">pendant</string>
+    <string name="manilla">Bracelet</string>
+    <string name="material">Material</string>
+    <string name="numero">Number Handles</string>
+    <string name="pago">Payment</string>
+    <string name="tipo">type</string>
+    <string name="total_pagar">Total Payment</string>
+</resources>
