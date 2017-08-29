@@ -39,7 +39,6 @@
             android:id="@+id/txtnumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.02"
             android:ems="10"
             android:fontFamily="serif"
             android:inputType="textPersonName|number" />
@@ -59,23 +58,7 @@
             android:id="@+id/cbxmaterial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.02" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif"
-            android:text="@string/tipo"
-            android:textAlignment="viewStart"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <Spinner
-            android:id="@+id/cbxtipo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.02" />
+            android:layout_weight="0.17" />
 
         <TextView
             android:id="@+id/textView3"
@@ -91,7 +74,23 @@
             android:id="@+id/cbxdije"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.02" />
+            android:layout_weight="0.15" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="@string/tipo"
+            android:textAlignment="viewStart"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cbxtipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" />
 
         <TextView
             android:id="@+id/textView6"
@@ -107,7 +106,7 @@
             android:id="@+id/cbxpago"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.02" />
+            android:layout_weight="0.17" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,6 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="calcular"
                 android:text="@string/calcular" />
 
             <Button
@@ -140,10 +140,9 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txtpago"
+            android:id="@+id/txtpago_resultado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.02"
             android:textSize="30sp" />
 
     </LinearLayout>

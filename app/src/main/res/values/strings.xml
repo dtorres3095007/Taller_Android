@@ -9,4 +9,33 @@
     <string name="numero">Numero Manillas</string>
     <string name="calcular">Calcular</string>
     <string name="borrar">Borrar</string>
+    <string name="cuero">Cuero</string>
+    <string name="cuerda">Cuerda</string>
+    <string name="martillo">Martillo</string>
+    <string name="ancla">Ancla</string>
+    <string name="oro">Oro</string>
+    <string name="oro_rodado">Oro Rosado</string>
+    <string name="plata">Plata</string>
+    <string name="niquel">Niquel</string>
+    <string name="dolar">Dolar</string>
+    <string name="peso">Peso</string>
+    <string-array name="pago_array">
+        <item>@string/dolar</item>
+        <item>@string/peso</item>
+    </string-array>
+    <string-array name="material_array">
+        <item>@string/cuero</item>
+        <item>@string/cuerda</item>
+    </string-array>
+    <string-array name="dije_array">
+        <item>@string/martillo</item>
+        <item>@string/ancla</item>
+    </string-array>
+    <string-array name="tipo_array">
+        <item>@string/oro</item>
+        <item>@string/oro_rodado</item>
+        <item>@string/niquel</item>
+        <item>@string/plata</item>
+    </string-array>
+
 </resources>
