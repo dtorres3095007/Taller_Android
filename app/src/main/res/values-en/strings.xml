@@ -13,11 +13,12 @@
     <string name="cuerda">rope</string>
     <string name="cuero">leather</string>
     <string name="martillo">hammer</string>
-    <string name="niquel">nickel</string>
     <string name="oro">gold</string>
     <string name="oro_rodado">Pink gold</string>
     <string name="plata">silver</string>
     <string name="ancla">anchor</string>
     <string name="dolar">dollar</string>
     <string name="peso">Peso</string>
+    <string name="niquel">Nickel</string>
+    <string name="mensaje_error_num">Enter Number Handles</string>
 </resources>

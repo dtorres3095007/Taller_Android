@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Principal extends AppCompatActivity {
     private TextView resultado_pago;
@@ -54,17 +55,17 @@ public class Principal extends AppCompatActivity {
 
     public void calcular(View v){
 
-        double valor =0;
-        int  opcion_tipo_manilla = tipo_manillas.getSelectedItemPosition();
-        int  opcion_material_manilla = materiales_manillas.getSelectedItemPosition();
-        int  opcion_pago_manilla = pago_manillas.getSelectedItemPosition();
-        int  opcion_dije_manilla = dije_manillas.getSelectedItemPosition();
-
-        String tipo_selecci = tipo_ma[opcion_tipo_manilla];
-        String material_selecci = mate_ma[opcion_material_manilla];
-        String pago_selecci = pago_ma[opcion_pago_manilla];
-        String dije_selecci = dije_ma[opcion_dije_manilla];
-
+if (Validar()){
+    double valor =0;
+    int  opcion_tipo_manilla = tipo_manillas.getSelectedItemPosition();
+    int  opcion_material_manilla = materiales_manillas.getSelectedItemPosition();
+    int  opcion_pago_manilla = pago_manillas.getSelectedItemPosition();
+    int  opcion_dije_manilla = dije_manillas.getSelectedItemPosition();
+    int Num =Integer.parseInt(num_man.getText().toString());
+    String tipo_selecci = tipo_ma[opcion_tipo_manilla];
+    String material_selecci = mate_ma[opcion_material_manilla];
+    String pago_selecci = pago_ma[opcion_pago_manilla];
+    String dije_selecci = dije_ma[opcion_dije_manilla];
 if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("martillo") && (tipo_selecci.equalsIgnoreCase("oro") || tipo_selecci.equalsIgnoreCase("oro rosado"))){
     valor=100;
 }else if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("martillo") && tipo_selecci.equalsIgnoreCase("plata") ){
@@ -93,9 +94,26 @@ if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("
     resultado_pago.setText("Manilla No Disponible");
     return;
 }
-        resultado_pago.setText("$"+valor);
+        double total = valor*Num;
+        if (pago_selecci.equalsIgnoreCase("dolar")){
+            resultado_pago.setText("$"+total);
+        }else{
+            total =total*3200;
+            resultado_pago.setText("$"+total);
+        }
 
 
+
+}
+    }
+
+
+    public boolean Validar(){
+        if (num_man.getText().toString().isEmpty()){
+            num_man.setError(resources.getString(R.string.mensaje_error_num));
+            return false;
+        }
+        return true;
 
     }
 }

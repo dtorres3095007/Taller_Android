@@ -37,5 +37,6 @@
         <item>@string/niquel</item>
         <item>@string/plata</item>
     </string-array>
+    <string name="mensaje_error_num">Ingrese Numero de Manillas</string>
 
 </resources>
