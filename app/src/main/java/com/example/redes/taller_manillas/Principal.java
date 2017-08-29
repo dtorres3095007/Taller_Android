@@ -57,6 +57,7 @@ public class Principal extends AppCompatActivity {
 
 if (Validar()){
     double valor =0;
+
     int  opcion_tipo_manilla = tipo_manillas.getSelectedItemPosition();
     int  opcion_material_manilla = materiales_manillas.getSelectedItemPosition();
     int  opcion_pago_manilla = pago_manillas.getSelectedItemPosition();

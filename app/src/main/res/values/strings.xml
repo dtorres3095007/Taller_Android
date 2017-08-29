@@ -33,10 +33,12 @@
     </string-array>
     <string-array name="tipo_array">
         <item>@string/oro</item>
+        <item>@string/baño_oro</item>
         <item>@string/oro_rodado</item>
         <item>@string/niquel</item>
         <item>@string/plata</item>
     </string-array>
     <string name="mensaje_error_num">Ingrese Numero de Manillas</string>
+    <string name="baño_oro">Baño de Oro</string>
 
 </resources>

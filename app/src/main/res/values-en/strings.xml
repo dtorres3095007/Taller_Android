@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Taller_manillas</string>
-    <string name="borrar">delete</string>
+    <string name="borrar">Delete</string>
     <string name="calcular">Calculate</string>
     <string name="dije">pendant</string>
     <string name="manilla">Bracelet</string>
@@ -21,4 +21,5 @@
     <string name="peso">Peso</string>
     <string name="niquel">Nickel</string>
     <string name="mensaje_error_num">Enter Number Handles</string>
+    <string name="baño_oro">Golden Bath</string>
 </resources>
