@@ -40,5 +40,6 @@
     </string-array>
     <string name="mensaje_error_num">Ingrese Numero de Manillas</string>
     <string name="baño_oro">Baño de Oro</string>
+    <string name="error_diponible">Manilla no disponible</string>
 
 </resources>

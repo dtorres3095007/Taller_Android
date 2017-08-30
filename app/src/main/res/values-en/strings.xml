@@ -22,4 +22,5 @@
     <string name="niquel">Nickel</string>
     <string name="mensaje_error_num">Enter Number Handles</string>
     <string name="baño_oro">Golden Bath</string>
+    <string name="error_diponible">Handle not available</string>
 </resources>

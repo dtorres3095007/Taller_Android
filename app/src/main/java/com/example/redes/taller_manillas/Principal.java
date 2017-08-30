@@ -58,45 +58,42 @@ public class Principal extends AppCompatActivity {
 if (Validar()){
     double valor =0;
 
-    int  opcion_tipo_manilla = tipo_manillas.getSelectedItemPosition();
-    int  opcion_material_manilla = materiales_manillas.getSelectedItemPosition();
-    int  opcion_pago_manilla = pago_manillas.getSelectedItemPosition();
-    int  opcion_dije_manilla = dije_manillas.getSelectedItemPosition();
-    int Num =Integer.parseInt(num_man.getText().toString());
-    String tipo_selecci = tipo_ma[opcion_tipo_manilla];
-    String material_selecci = mate_ma[opcion_material_manilla];
-    String pago_selecci = pago_ma[opcion_pago_manilla];
-    String dije_selecci = dije_ma[opcion_dije_manilla];
-if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("martillo") && (tipo_selecci.equalsIgnoreCase("oro") || tipo_selecci.equalsIgnoreCase("oro rosado"))){
-    valor=100;
-}else if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("martillo") && tipo_selecci.equalsIgnoreCase("plata") ){
-    valor=80;
-}else if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("martillo") && tipo_selecci.equalsIgnoreCase("niquel")){
-    valor=70;
-}else if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("ancla") && (tipo_selecci.equalsIgnoreCase("oro") || tipo_selecci.equalsIgnoreCase("oro rosado"))){
-    valor=120;
-}else if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("ancla") && tipo_selecci.equalsIgnoreCase("plata")){
-    valor=100;
-}else if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("ancla") && tipo_selecci.equalsIgnoreCase("niquel") ){
-    valor=90;
-}else if(material_selecci.equalsIgnoreCase("cuerda") && dije_selecci.equalsIgnoreCase("martillo") && (tipo_selecci.equalsIgnoreCase("oro") || tipo_selecci.equalsIgnoreCase("oro rosado"))){
-    valor=90;
-}else if(material_selecci.equalsIgnoreCase("cuerda") && dije_selecci.equalsIgnoreCase("martillo") && tipo_selecci.equalsIgnoreCase("plata") ){
-    valor=70;
-}else if(material_selecci.equalsIgnoreCase("cuerda") && dije_selecci.equalsIgnoreCase("martillo") && tipo_selecci.equalsIgnoreCase("niquel")){
-    valor=50;
-}else if(material_selecci.equalsIgnoreCase("cuerda") && dije_selecci.equalsIgnoreCase("ancla") && (tipo_selecci.equalsIgnoreCase("oro") || tipo_selecci.equalsIgnoreCase("oro rosado"))){
-    valor=110;
-}else if(material_selecci.equalsIgnoreCase("cuerda") && dije_selecci.equalsIgnoreCase("ancla") && tipo_selecci.equalsIgnoreCase("plata")){
-    valor=90;
-}else if(material_selecci.equalsIgnoreCase("cuerda") && dije_selecci.equalsIgnoreCase("ancla") && tipo_selecci.equalsIgnoreCase("niquel") ){
-    valor=80;
-}else{
-    resultado_pago.setText("Manilla No Disponible");
-    return;
-}
+    int tipo_selecci = tipo_manillas.getSelectedItemPosition();
+    int material_selecci = materiales_manillas.getSelectedItemPosition();
+    int pago_selecci = pago_manillas.getSelectedItemPosition();
+    int dije_selecci = dije_manillas.getSelectedItemPosition();
+    int Num = Integer.parseInt(num_man.getText().toString());
+
+    if (material_selecci == 0 && dije_selecci == 0 && (tipo_selecci == 0 || tipo_selecci == 2)) {
+        valor = 100;
+    } else if (material_selecci == 0 && dije_selecci == 0 && tipo_selecci == 4) {
+        valor = 80;
+    } else if (material_selecci == 0 && dije_selecci == 0 && tipo_selecci == 3) {
+        valor = 70;
+    } else if (material_selecci == 0 && dije_selecci == 1 && (tipo_selecci == 0 || tipo_selecci == 2)) {
+        valor = 120;
+    } else if (material_selecci == 0 && dije_selecci == 1 && tipo_selecci == 4) {
+        valor = 100;
+    } else if (material_selecci == 0 && dije_selecci == 1 && tipo_selecci == 3) {
+        valor = 90;
+    } else if (material_selecci == 1 && dije_selecci == 0 && (tipo_selecci == 0 || tipo_selecci == 2)) {
+        valor = 90;
+    } else if (material_selecci == 1 && dije_selecci == 0 && tipo_selecci == 4) {
+        valor = 70;
+    } else if (material_selecci == 1 && dije_selecci == 0 && tipo_selecci == 3) {
+        valor = 50;
+    } else if (material_selecci == 1 && dije_selecci == 1 && (tipo_selecci == 0 || tipo_selecci == 2)) {
+        valor = 110;
+    } else if (material_selecci == 1 && dije_selecci == 1 && tipo_selecci == 4) {
+        valor = 90;
+    } else if (material_selecci == 1 && dije_selecci == 1 && tipo_selecci == 3) {
+        valor = 80;
+    } else {
+        resultado_pago.setText(resources.getString(R.string.error_diponible) + " ");
+        return;
+    }
         double total = valor*Num;
-        if (pago_selecci.equalsIgnoreCase("dolar")){
+        if (pago_selecci==0){
             resultado_pago.setText("$"+total);
         }else{
             total =total*3200;
@@ -115,6 +112,12 @@ if(material_selecci.equalsIgnoreCase("cuero") && dije_selecci.equalsIgnoreCase("
             return false;
         }
         return true;
+
+    }
+
+    public void Borrar(View v){
+       num_man.setText("");
+        resultado_pago.setText("");
 
     }
 }
